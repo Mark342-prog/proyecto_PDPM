@@ -66,7 +66,7 @@ fun Mytext(text: String){
 fun LoginUI(context: Context) {
     var email by remember{ mutableStateOf("")}
     var password by remember{ mutableStateOf("")}
-    
+
     Column() {
 
         Text(text = "Login Here",
@@ -103,7 +103,7 @@ fun LoginUI(context: Context) {
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
         )
-        
+
         OutlinedButton(onClick = { logged(email,password, context) },
             modifier = Modifier.fillMaxWidth().padding(bottom = 100.dp, top = 10.dp))
         {
@@ -121,7 +121,3 @@ fun logged(email: String, password: String, context: Context) {
     }
 
 }
-
-
-
-
